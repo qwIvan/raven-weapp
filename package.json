@@ -1,12 +1,24 @@
 {
-  "name": "@dayuw/sentry-taro-weapp",
-  "version": "0.0.7",
+  "name": "@mqing/sentry-taro-weapp",
+  "version": "0.0.8",
   "description": "Sentry SDK for Taro with WeApp",
   "main": "src/singleton.js",
   "scripts": {
-    "build": "grunt build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "dayuw",
-  "license": "ISC"
+  "author": "mqing",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatwade/raven-weapp.git"
+  },
+  "keywords": [
+    "taro",
+    "weapp",
+    "sentry"
+  ],
+  "bugs": {
+    "url": "https://github.com/beatwade/raven-weapp/issues"
+  },
+  "homepage": "https://github.com/beatwade/raven-weapp#readme"
 }

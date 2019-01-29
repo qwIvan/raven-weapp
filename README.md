@@ -1,7 +1,8 @@
 FORK [YOUZAN](https://github.com/youzan/raven-weapp) 进行npm 封装, 同时自定义后续的功能
 
 #### 安装
-
+yarn add @mqing/sentry-taro-weapp
+npm install @mqing/sentry-taro-weapp
 #### 初始化Raven
 
 ```
@@ -15,6 +16,10 @@ options = {
     allowDuplicates: true, // 允许相同错误重复上报
     sampleRate: 0.5 // 采样率
 }
+```
+[taro](https://nervjs.github.io/taro/docs/tutorial.html)
+```
+taro 中为react 的ComponentWillMount(){}
 ```
 #### 收集信息
 收集的信息将在上报时被一起带上
@@ -32,7 +37,8 @@ options = {
 可以通过[Raven.setUserContext(context)](https://docs.sentry.io/learn/context/#capturing-the-user)或者[Raven.setExtraContext(context)](https://docs.sentry.io/learn/context/#extra-context)添加更多信息（kdtId和userId等）
 ##### 用户行为
 ###### console
-console的行为默认将被自动收集
+console的行为默认将被自动收集, 注意为附带到breadcrumbs里收集, 见文档或者源码
+[breadcrumbs](https://docs.sentry.io/error-reporting/capturing/?platform=browser)
 ###### ajax
 wx.request不可扩展，因此只能手动收集请求的行为：例如在经过封装的请求函数的成功回调内添加：
 ```
@@ -62,3 +68,5 @@ onError(msg) {
     })
   }
 ```
+Taro:
+React 16.0 以上请在OnBoundary 里处理component 错误(**taro 支持**)
