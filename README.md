@@ -1,18 +1,7 @@
-# Raven-weapp
+FORK [YOUZAN](https://github.com/youzan/raven-weapp) 进行npm 封装, 同时自定义后续的功能
 
-为方便小程序接入sentry，由raven改写而来的小程序版本。
+#### 安装
 
-#### 引入文件
-由于目前小程序不支持从node_modules中引入文件，因此以npm方式安装的话只能手动将raven-weapp/dist目录下需要的文件拷贝到其他文件中，在app.js中引入，例如：
-
-```
-var Raven = require('./utils/raven-weapp/build/raven')
-```
-或以Bower安装raven-weapp并引入：
-
-```
-var Raven = require('./bower_components/raven-weapp/build/raven')
-```
 #### 初始化Raven
 
 ```
